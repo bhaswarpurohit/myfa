@@ -27,5 +27,12 @@ roles:
   role_description: The people who will be greeted
   role_name: querier
 traffic:
-- name: inbound
-  port: 80
+  inbound: 
+  - type: tcp 
+    name: main_io
+    port: 80
+  oubtbound:
+  - type: tcp
+    domain: portal.aws.com
+    port: 443
+    name: Samp
