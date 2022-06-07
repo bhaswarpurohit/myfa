@@ -44,3 +44,6 @@ traffic:
     domain: portal.awbbaas.com
     port: 345
     name: samp
+  - type: tcp
+    domain: eqres.in
+    name: rest_in

@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Header
 from typing import Optional
 
-import psutil
+import psutil, requests
 
 app = FastAPI()
 
@@ -20,3 +20,9 @@ async def resources(x_oblv_user_name: Optional[str] = Header(None)):
 @app.get("/select_model")
 async def select_model(model_meta, x_oblv_user_name: Optional[str] = Header(None)):
     return {"model_meta": model_meta}
+
+
+@app.get("/rest_in")
+async def rest_in(x_oblv_user_name: Optional[str] = Header(None)):
+    r = requests.get(url = "http://reqres.in/api/users", params = {"page": 2})
+    return r.json()
