@@ -31,7 +31,7 @@ traffic:
   - type: tcp 
     name: main_io
     port: 80
-  oubtbound:
+  outbound:
   - type: tcp
     domain: portal.aws.com
     port: 443
