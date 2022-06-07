@@ -47,3 +47,4 @@ traffic:
   - type: tcp
     domain: eqres.in
     name: rest_in
+    port: 443
