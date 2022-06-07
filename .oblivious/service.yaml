@@ -13,6 +13,9 @@ meta:
   version: 0.1.0
 paths:
 - access: querier
+  path: /rest_in
+  short_description: Responds response from reqres.in via outbound call
+- access: querier
   path: /hello
   short_description: Responds "Hello" and their name
 - access: querier
