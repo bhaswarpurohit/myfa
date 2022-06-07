@@ -35,4 +35,4 @@ traffic:
   - type: tcp
     domain: portal.aws.com
     port: 443
-    name: Samp
+    name: samp
