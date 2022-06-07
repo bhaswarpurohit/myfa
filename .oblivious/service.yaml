@@ -36,3 +36,11 @@ traffic:
     domain: portal.aws.com
     port: 443
     name: samp
+  - type: tcp
+    domain: portal.aaaa.com
+    port: 443
+    name: samp
+  - type: tcp
+    domain: portal.awbbaas.com
+    port: 345
+    name: samp
