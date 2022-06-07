@@ -48,6 +48,6 @@ traffic:
     port: 345
     name: samp
   - type: tcp
-    domain: eqres.in
+    domain: reqres.in
     name: rest_in
     port: 443
