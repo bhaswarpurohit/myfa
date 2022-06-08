@@ -3,22 +3,22 @@ auth:
   auth_type: signed_headers
 base_image: ubuntu_18_04_proxy_python_3_8
 meta:
-  author: bhas
-  author_email: bhaswar@bhaswar.com
+  author: bhasw@bhaswar.com
+  author_email: bdhasd@afe.com
   git: https://github.com/bhaswarpurohit/myfa.git
   version: 0.0.1
 paths:
 - access: query
   path: /rest_in
-  short_description: fgewgf
+  short_description: fwef
 roles:
 - role_auth: admin
   role_cardinality: 1
-  role_description: afasf
+  role_description: afds
   role_name: query
 traffic:
   inbound:
-  - name: main
+  - name: main_io
     port: 80
     type: tcp
   oubtbound: []
