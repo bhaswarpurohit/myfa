@@ -24,5 +24,8 @@ async def select_model(model_meta, x_oblv_user_name: Optional[str] = Header(None
 
 @app.get("/rest_in")
 async def rest_in(x_oblv_user_name: Optional[str] = Header(None)):
+    print("endpoint called")
     r = requests.get(url = "http://reqres.in/api/users", params = {"page": 2})
+    print("endpoint finish")
+    print(str(r))
     return r.json()
