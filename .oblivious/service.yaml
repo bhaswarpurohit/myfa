@@ -1,24 +1,53 @@
 auth:
-- auth_name: admin
+- auth_name: default
   auth_type: signed_headers
 base_image: ubuntu_18_04_proxy_python_3_8
+build_args:
+- name: example
+  required_arg: false
+  type: integer
 meta:
-  author: bhasw@bhaswar.com
-  author_email: bdhasd@afe.com
-  git: https://github.com/bhaswarpurohit/myfa.git
-  version: 0.0.1
+  author: Example
+  author_email: example@oblivious.ai
+  git: https://github.com/ObliviousAI/my-first-oblivious-app.git
+  version: 0.1.0
 paths:
-- access: query
+- access: querier
   path: /rest_in
-  short_description: fwef
+  short_description: Responds response from reqres.in via outbound call
+- access: querier
+  path: /hello
+  short_description: Responds "Hello" and their name
+- access: querier
+  path: /resources
+  short_description: Enclave resources
+- access: querier
+  path: /select_model
+  short_description: Enclave model
 roles:
-- role_auth: admin
+- role_auth: default
   role_cardinality: 1
-  role_description: afds
-  role_name: query
+  role_description: The people who will be greeted
+  role_name: querier
 traffic:
-  inbound:
-  - name: main_io
+  inbound: 
+  - type: tcp 
+    name: main_io
     port: 80
-    type: tcp
-  outbound: []
+  outbound:
+  - type: tcp
+    domain: portal.aws.com
+    port: 443
+    name: samp4
+  - type: tcp
+    domain: portal.aaaa.com
+    port: 443
+    name: samp3
+  - type: tcp
+    domain: portal.awbbaas.com
+    port: 345
+    name: samp5
+  - type: tcp
+    domain: reqres.in
+    name: rest_in
+    port: 443
