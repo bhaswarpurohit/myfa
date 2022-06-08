@@ -21,4 +21,4 @@ traffic:
   - name: main_io
     port: 80
     type: tcp
-  oubtbound: []
+  outbound: []
