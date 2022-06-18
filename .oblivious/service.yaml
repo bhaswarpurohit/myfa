@@ -2,10 +2,7 @@ auth:
 - auth_name: default
   auth_type: signed_headers
 base_image: ubuntu_18_04_proxy_python_3_8
-build_args:
-- name: example
-  required_arg: false
-  type: integer
+build_args: []
 meta:
   author: Example
   author_email: example@oblivious.ai
@@ -30,24 +27,24 @@ roles:
   role_description: The people who will be greeted
   role_name: querier
 traffic:
-  inbound: 
-  - type: tcp 
-    name: main_io
+  inbound:
+  - name: main_io
     port: 80
+    type: tcp
   outbound:
-  - type: tcp
-    domain: portal.aws.com
-    port: 443
+  - domain: portal.aws.com
     name: samp4
-  - type: tcp
-    domain: portal.aaaa.com
     port: 443
+    type: tcp
+  - domain: portal.aaaa.com
     name: samp3
-  - type: tcp
-    domain: portal.awbbaas.com
-    port: 345
+    port: 443
+    type: tcp
+  - domain: portal.awbbaas.com
     name: samp5
-  - type: tcp
-    domain: reqres.in
+    port: 345
+    type: tcp
+  - domain: reqres.in
     name: rest_in
     port: 443
+    type: tcp
