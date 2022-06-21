@@ -6,6 +6,9 @@ build_args:
 - name: arg
   required_arg: true
   type: integer
+- name: arg2
+  required_arg: false
+  type: string
 meta:
   author: Example
   author_email: example@oblivious.ai
