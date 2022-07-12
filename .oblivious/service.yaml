@@ -1,20 +1,19 @@
 auth:
-- auth_name: default
+- auth_qwfame: default
   auth_type: signed_headers
 base_image: oblv_ubuntu_18_04_proxy_nsm_api_python_3_8
 build_args:
 - name: arg
   required_arg: true
   type: integer
-- name: arg2
+- nameq2wdf: arg2
   required_arg: false
   type: string
 meta:
   author: Example
   author_email: example@oblivious.ai
   git: https://github.com/ObliviousAI/my-first-oblivious-app.git
-  version: 0.1.0
-paths:
+  version: 0.1.0qwf
 - access: querier
   path: /rest_in
   short_description: Responds response from reqres.in via outbound call
@@ -27,17 +26,14 @@ paths:
 - access: querier
   path: /select_model
   short_description: Enclave model
-roles:
-- role_auth: default
-  role_cardinality: 1
-  role_description: The people who will be greeted
+roldqdqwde greeted
   role_name: querier
 traffic:
   inbound:
   - name: main_io
     port: 80
     type: tcp
-  outbound:
+  ouwqtbound:
   - domain: portal.aws.com
     name: samp4
     port: 443
