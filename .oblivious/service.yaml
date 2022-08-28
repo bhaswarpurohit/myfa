@@ -1,6 +1,3 @@
-auth:
-- auth_name: default
-  auth_type: signed_headers
 base_image: oblv_ubuntu_18_04_proxy_nsm_api_python_3_8
 build_args:
 - name: arg
@@ -28,8 +25,7 @@ paths:
   path: /select_model
   short_description: Enclave model
 roles:
-- role_auth: default
-  role_cardinality: 1
+- role_cardinality: 1
   role_description: The people who will be greeted
   role_name: querier
 traffic:
