@@ -25,7 +25,7 @@ paths:
   path: /select_model
   short_description: Enclave model
 roles:
-- role_cardinality: 1
+- role_cardinality: 2
   role_description: The people who will be greeted
   role_name: querier
 traffic:
