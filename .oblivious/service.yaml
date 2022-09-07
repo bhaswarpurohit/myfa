@@ -1,4 +1,3 @@
-$%!
 auth:
 - auth_name: default
   auth_type: signed_headers
