@@ -10,7 +10,7 @@ build_args:
   required_arg: false
   type: string
 meta:
-  author: E
+  author: Example
   author_email: example@oblivious.ai
   git: https://github.com/ObliviousAI/my-first-oblivious-app.git
   version: 0.1.0
