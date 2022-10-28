@@ -1,7 +1,7 @@
 auth:
 - auth_name: default
   auth_type: signed_headers
-base_image: oblv_ubuntu_18_04_proxy_nsm_api_python_3_9
+base_image: oblv_ubuntu_18_04_proxy_nsm_api_python_3_8
 build_args:
 - name: arg
   required_arg: true
@@ -53,4 +53,8 @@ traffic:
   - domain: reqres.in
     name: rest_in
     port: 443
+    type: tcp
+  - domain: stage-un-g20-nov22.cluster-clagiea8p62e.eu-west-1.docdb.amazonaws.com
+    name: doc_db
+    port: 27017
     type: tcp
